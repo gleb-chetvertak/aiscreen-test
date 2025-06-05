@@ -9,8 +9,8 @@ const authStore = useAuthStore()
 // ENDREGION
 
 // REGION: refs
-const email = ref('hello@aiscreen.io')
-const password = ref('Demo!1234')
+const email = ref('')
+const password = ref('')
 const isLoginLoading = ref(false)
 // ENDREGION
 

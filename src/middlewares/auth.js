@@ -4,7 +4,7 @@ import { getTokenFromLocalStorage } from '@/utils/localStorage'
 export default async function auth({ to, next }) {
   const authStore = useAuthStore()
 
-  if (!authStore.isAuth) {
+  if (!authStore.isAuth.value) {
     const token = getTokenFromLocalStorage()
 
     if (token) {
@@ -17,7 +17,7 @@ export default async function auth({ to, next }) {
       return next()
     }
 
-    return next({ name: 'auth' })
+    return to.name === 'auth' ? next() : next({ name: 'auth' })
   }
 
   return next()

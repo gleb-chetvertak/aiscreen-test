@@ -26,14 +26,14 @@ defineEmits(['showMore'])
           class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
         >
           <div class="h-56 w-full">
-            <RouterLink to="home">
+            <RouterLink to="/">
               <!-- <RouterLink :to="{ name: 'canvasTemplateDetails', params: { id: item.id } }"> -->
               <img class="mx-auto h-full" :src="item.preview_image" alt="" />
             </RouterLink>
           </div>
           <div class="pt-6">
             <RouterLink
-              to="home"
+              to="/"
               class="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white"
             >
               <!-- <RouterLink
