@@ -1,8 +1,13 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { login } from '@/services/auth'
 import { useAuthStore } from '@/stores/auth'
 import { setTokenToLocalStorage } from '@/utils/localStorage'
+
+// REGION: composables
+const router = useRouter()
+// ENDREGION
 
 // REGION: store
 const authStore = useAuthStore()
@@ -27,6 +32,8 @@ const handleSubmit = async () => {
     authStore.setToken(response.data.token)
 
     setTokenToLocalStorage(response.data.token)
+
+    router.push({ name: 'home' })
   } catch (error) {
     console.error('Login failed:', error)
   } finally {
