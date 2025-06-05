@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: 'https://github.com/gleb-chetvertak/aiscreen-test/',
+  base: '/aiscreen-test/',
   plugins: [vue(), vueDevTools(), tailwindcss()],
   resolve: {
     alias: {
