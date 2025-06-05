@@ -13,14 +13,14 @@ const router = createRouter({
         middleware: [authMiddleware],
       },
     },
-    {
-      path: `/canvas-templates/:id`,
-      name: 'canvasTemplateDetails',
-      component: () => import('../views/CanvasTemplateDetailsView.vue'),
-      meta: {
-        middleware: [authMiddleware],
-      },
-    },
+    // {
+    //   path: `/canvas-templates/:id`,
+    //   name: 'canvasTemplateDetails',
+    //   component: () => import('../views/CanvasTemplateDetailsView.vue'),
+    //   meta: {
+    //     middleware: [authMiddleware],
+    //   },
+    // },
     {
       path: '/auth',
       name: 'auth',
